@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace StatePatternSample.GenericAction
 {
-    public class CMPService2<T> : ISvc<T> where T : class, ISvcInfo, new()
+    public class CMPService2<T> : ISvc<T> where T : class, ISvcInfo//, new()
     {
         public CMPService2() {
             MessageBox.Show($"called from {this.GetType().Name}");
-            this.info = new T();
+            //this.info = new T();
         }
         public T info { get; set; }
 

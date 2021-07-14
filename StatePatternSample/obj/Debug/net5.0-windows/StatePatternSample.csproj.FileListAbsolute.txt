@@ -22,3 +22,4 @@ E:\NetCoreSample\StatePatternSample\StatePatternSample\bin\Debug\net5.0-windows\
 E:\NetCoreSample\StatePatternSample\StatePatternSample\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
 E:\NetCoreSample\StatePatternSample\StatePatternSample\bin\Debug\net5.0-windows\ICSharpCode.SharpZipLib.dll
 E:\NetCoreSample\StatePatternSample\StatePatternSample\obj\Debug\net5.0-windows\StatePatternSample.csproj.CopyComplete
+E:\NetCoreSample\StatePatternSample\StatePatternSample\obj\Debug\net5.0-windows\StatePatternSample.csprojAssemblyReference.cache
