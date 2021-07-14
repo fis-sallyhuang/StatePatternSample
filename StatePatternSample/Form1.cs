@@ -1,4 +1,5 @@
-﻿using StatePatternSample.GenericTask;
+﻿using StatePatternSample.GenericAction;
+using StatePatternSample.GenericTask;
 using StatePatternSample.GenericTask.Actions;
 using StatePatternSample.NoGenericTask;
 using System;
@@ -53,6 +54,19 @@ namespace StatePatternSample
             }
             
      
+        }
+
+        private void btnGenAct_Click(object sender, EventArgs e)
+        {
+
+            CMPService2<CMPService2Info> svc2 = new CMPService2<CMPService2Info>();
+            svc2.LoadActionList();
+            svc2.ProcessForEachAction();
+            svc2.ShowInfoResult();
+            //CMPService1<CMPService1Info> svc1 = new CMPService1<CMPService1Info>();
+            //svc1.LoadActionList();
+            //svc1.ProcessForEachAction();
+            //svc1.ShowInfoResult();
         }
     }
 }
