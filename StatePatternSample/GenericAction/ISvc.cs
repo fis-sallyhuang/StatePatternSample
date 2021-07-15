@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace StatePatternSample.GenericAction
 {
-    public interface ISvc<T> where T : class, ISvcInfo
+    public interface ISvc//<T> where T : class, ISvcInfo
     {
-        T info { set; get; }
-        List<ISvcAction<T>> svcActions { set; get; }
+        ISvcInfo info { set; get; }
+        List<ISvcAction> svcActions { set; get; }
         void LoadActionList() ;
         void ProcessForEachAction();
+        void ProcessForEachActionTask();
         void ShowInfoResult();
     }
 }

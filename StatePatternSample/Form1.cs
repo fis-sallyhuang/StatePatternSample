@@ -58,7 +58,7 @@ namespace StatePatternSample
 
         private void btnGenAct_Click(object sender, EventArgs e)
         {
-            CMPService<CMPService2<CMPService2Info>, CMPService2Info> gSvc = new CMPService<CMPService2<CMPService2Info>, CMPService2Info>();
+            CMPService<CMPService2<CMPService2Info>> gSvc = new CMPService<CMPService2<CMPService2Info>>();
             gSvc.ProcessCMPActions();
             //CMPService2<CMPService2Info> svc2 = new CMPService2<CMPService2Info>();
             //svc2.LoadActionList();
@@ -68,6 +68,12 @@ namespace StatePatternSample
             //svc1.LoadActionList();
             //svc1.ProcessForEachAction();
             //svc1.ShowInfoResult();
+        }
+
+        private void btnGenActionWithTask_Click(object sender, EventArgs e)
+        {
+            CMPService<CMPService1<CMPService1Info>> gSvc = new CMPService<CMPService1<CMPService1Info>>();
+            gSvc.ProcessCMPActionsWithTask();
         }
     }
 }

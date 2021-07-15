@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StatePatternSample.GenericAction
 {
-    public interface ISvcAction<T> where T : class, ISvcInfo
+    public interface ISvcAction//<T> where T : class, ISvcInfo
     {
-        T svcInfo { set; get; }
+        ISvcInfo svcInfo { set; get; }
         string commonField { set; get; }
         void callSvcActionApi();
         void getInfoFromApiResponse();

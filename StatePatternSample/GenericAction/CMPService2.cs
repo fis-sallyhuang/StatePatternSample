@@ -7,19 +7,19 @@ using System.Windows.Forms;
 
 namespace StatePatternSample.GenericAction
 {
-    public class CMPService2<T> : ISvc<T> where T : class, ISvcInfo//, new()
+    public class CMPService2<T> : ISvc where T : class, ISvcInfo, new()
     {
         public CMPService2() {
             MessageBox.Show($"called from {this.GetType().Name}");
-            //this.info = new T();
+            this.info = new T();
         }
-        public T info { get; set; }
+        public ISvcInfo info { get; set; }
 
-        public List<ISvcAction<T>> svcActions { get; set; }
+        public List<ISvcAction> svcActions { get; set; }
 
         public void LoadActionList()
         {
-            this.svcActions = new List<ISvcAction<T>>();
+            this.svcActions = new List<ISvcAction>();
             this.svcActions.Add(new CMPSvcAction2<T>());
             this.svcActions.Add(new CMPSvcAction4<T>());
             this.svcActions.Add(new CMPSvcAction5<T>());
@@ -33,6 +33,11 @@ namespace StatePatternSample.GenericAction
                 act.callSvcActionApi();
                 act.getInfoFromApiResponse();
             }
+        }
+
+        public void ProcessForEachActionTask()
+        {
+            throw new NotImplementedException();
         }
 
         public void ShowInfoResult()

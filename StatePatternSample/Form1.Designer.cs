@@ -32,6 +32,7 @@ namespace StatePatternSample
             this.btnGoNext = new System.Windows.Forms.Button();
             this.btnGoNextAction = new System.Windows.Forms.Button();
             this.btnGenAct = new System.Windows.Forms.Button();
+            this.btnGenActionWithTask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGoNext
@@ -64,11 +65,22 @@ namespace StatePatternSample
             this.btnGenAct.UseVisualStyleBackColor = true;
             this.btnGenAct.Click += new System.EventHandler(this.btnGenAct_Click);
             // 
+            // btnGenActionWithTask
+            // 
+            this.btnGenActionWithTask.Location = new System.Drawing.Point(413, 255);
+            this.btnGenActionWithTask.Name = "btnGenActionWithTask";
+            this.btnGenActionWithTask.Size = new System.Drawing.Size(159, 23);
+            this.btnGenActionWithTask.TabIndex = 3;
+            this.btnGenActionWithTask.Text = "GoGenActionWithTask";
+            this.btnGenActionWithTask.UseVisualStyleBackColor = true;
+            this.btnGenActionWithTask.Click += new System.EventHandler(this.btnGenActionWithTask_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGenActionWithTask);
             this.Controls.Add(this.btnGenAct);
             this.Controls.Add(this.btnGoNextAction);
             this.Controls.Add(this.btnGoNext);
@@ -83,6 +95,7 @@ namespace StatePatternSample
         private System.Windows.Forms.Button btnGoNext;
         private System.Windows.Forms.Button btnGoNextAction;
         private System.Windows.Forms.Button btnGenAct;
+        private System.Windows.Forms.Button btnGenActionWithTask;
     }
 }
 

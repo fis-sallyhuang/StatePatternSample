@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace StatePatternSample.GenericAction
 {
-    public class CMPSvcAction4<T> : ISvcAction<T> where T : class, ISvcInfo
+    public class CMPSvcAction4<T> : ISvcAction where T : class, ISvcInfo
     {
         public CMPSvcAction4()
         {
@@ -20,14 +20,14 @@ namespace StatePatternSample.GenericAction
         }
 
         public string commonField { get; set; }
-        public T svcInfo { get; set; }
+        public ISvcInfo svcInfo { get; set; }
 
         public void getInfoFromApiResponse()
         {
             MessageBox.Show($"called getInfoFromApiResponse from {this.GetType().Name}");
             this.commonField = this.GetType().Name;
-            var fild2 = this.svcInfo.GetType().GetProperty("fild2");
-            fild2.SetValue(this.svcInfo, $" {this.GetType().Name} - fild2");
+            var fild2 = ((T)this.svcInfo).GetType().GetProperty("fild2");
+            fild2.SetValue(((T)this.svcInfo), $" {this.GetType().Name} - fild2");
         }
     }
 }
